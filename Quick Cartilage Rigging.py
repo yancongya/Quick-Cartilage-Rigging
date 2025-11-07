@@ -8,7 +8,7 @@ bl_info = {
     "name": "🦴快速软骨绑定",
     "author": "烟囱鸭",
     "version": (1, 1, 0),
-    "blender": (2, 80, 0),
+    "blender": (4, 5, 0),
     "location": "3D View > UI > Damped Track",
     "description": "提供骨骼自动细分、FK绑定和阻尼追踪约束设置功能",
     "warning": "目前仅在4.5版本进行测试",
@@ -578,8 +578,8 @@ class WM_OT_CheckAddonUpdate(bpy.types.Operator):
 
     def invoke(self, context, event):
         try:
-            version_url = "https://github.com/yancongya/publish/blob/main/Quick%20Cartilage%20Rigging/version.txt"
-            script_url = "https://github.com/yancongya/publish/blob/main/Quick%20Cartilage%20Rigging/Quick%20Cartilage%20Rigging.py"
+            version_url = "https://github.com/yancongya/Quick-Cartilage-Rigging/blob/main/Quick%20Cartilage%20Rigging/version.txt"
+            script_url = "https://github.com/yancongya/Quick-Cartilage-Rigging/blob/main/Quick%20Cartilage%20Rigging/Quick%20Cartilage%20Rigging.py"
             remote_text = _fetch_text(version_url)
             remote_ver = _parse_version_tuple(remote_text)
             # 读取本地版本：直接使用本模块的 bl_info
